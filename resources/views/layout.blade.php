@@ -11,9 +11,10 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     {{-- icon --}}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    {{-- js --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <style>
-        
         .choice{
             background-color: rgb(247, 247, 247);
         }
@@ -51,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Profil</a>
@@ -87,9 +88,20 @@
                         <a class="nav-link">Login</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <i class="fa-brands fa-facebook nav-link" style="color: #ffffff;"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-square-instagram nav-link" style="color: #ffffff;"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-x-twitter nav-link" style="color: #ffffff;"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fa-brands fa-whatsapp nav-link" style="color: #ffffff;"></i>
+                    </li>
+                </ul>
             </div>
         </div>
         </div>

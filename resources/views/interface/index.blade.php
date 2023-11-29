@@ -42,6 +42,7 @@
         <div class="title d-flex justify-content-center">
             <h1>Pengaduan</h1>
         </div>
+        
         <div class="row w-100 d-flex justify-content-center my-3">
             <div class="col-2 choice m-2 rounded shadow d-flex flex-column text-center text-dark"
                 style="height:150px;">
@@ -94,8 +95,14 @@
                 </div>
             </div>
         </div>
+
+        <div class="tutor d-flex flex-column text-center justify-content-center">
+                <h5>Keder pan lapore pimen?</h5>
+                <a href="/keder" class="link-light">Klik ngene bae ngko diwarai carane</a>
+        </div>
         <hr>
         <div class="d-flex justify-content-center">
+            <a href="/game" class="link-underline link-underline-opacity-0 d-flex justify-content-center p-0">
                 <div class="row choice my-3 bg-light shadow-lg rounded text-dark w-50">
                     <div class="col-3">
                         <img src="img/console.jpg" alt="" width="150">
@@ -106,6 +113,7 @@
                         Car Free Day.
                     </div>
                 </div>
+            </a>
         </div>
     </div>
 @endsection

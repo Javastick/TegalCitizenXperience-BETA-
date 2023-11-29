@@ -9,4 +9,7 @@ class InterfaceController extends Controller
     public function index(){
         return view('interface.index');
     }
+    public function keder(){
+        return view('keder.index');
+    }
 }
