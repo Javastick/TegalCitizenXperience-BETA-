@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+    @include('partials.nav')
     <div class="jumbo d-flex flex-column justify-content-center align-items-center"
         style="background-image: url(img/jumbobg.png); background-size: cover;height:75vh;">
         <div class="img">
@@ -42,7 +43,6 @@
         <div class="title d-flex justify-content-center">
             <h1>Pengaduan</h1>
         </div>
-        
         <div class="row w-100 d-flex justify-content-center my-3">
             <div class="col-2 choice m-2 rounded shadow d-flex flex-column text-center text-dark"
                 style="height:150px;">
@@ -57,7 +57,7 @@
             <div class="col-2 choice m-2 rounded shadow d-flex flex-column text-center text-dark"
                 style="height:150px;">
                 <div class="icon m-5 mb-4">
-                    <i class="fa-solid fa-traffic-light fa-2xl" style="color: red;"></i>
+                    <i class="fa-sol=id fa-traffic-light fa-2xl" style="color: red;"></i>
                 </div>
                 <h3 class="mt-">Lalu Lintas</h3>
                 <div class="explain d-flex rounded d-flex justify-content-center align-items-center">
