@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ComplainController;
+use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\GptController;
+use App\Http\Controllers\HomeController;
 use App\Http\Middleware\VerifyCsrfToken;
 use Orhanerday\OpenAi\OpenAi;
 use Illuminate\Support\Facades\Route;
@@ -18,8 +21,15 @@ use App\Http\Controllers\InterfaceController;
 |
 */
 
-Route::get('/', [InterfaceController::class, 'index']);
+Auth::routes();
 
-Route::post('/chat', [GptController::class, 'chat'])->withoutMiddleware([VerifyCsrfToken::class]);
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/complaints', [ComplaintController::class, 'index'])->name('complaints');
+Route::get('/complaints/{id}/detail', [ComplaintController::class, 'detail'])->name('complaint.detail');
 
+Route::middleware('auth')->group(function(){
+    Route::get('/complaints/make', [ComplaintController::class, 'make'])->name('complaint.make');
+    Route::post('/complaints/make', [ComplaintController::class, 'store'])->name('complaint.store');
+    Route::post('/complaints/comment', [ComplaintController::class, 'comment'])->name('complaint.comment');
+});
 
