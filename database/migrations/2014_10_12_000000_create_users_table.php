@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('card')->unique();
             $table->string('image')->nullable();
             $table->string('role')->nullable();
+            $table->integer('point')->default(0);
 
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();

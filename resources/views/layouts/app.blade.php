@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    {{-- <link href="/img/favicon.png" rel="icon">
-  <link href="/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
+    <link href="/storage/img/tcx.png" rel="icon">
+    <link href="/storage/img/tcx.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,13 +40,17 @@
             <div class="contact-info d-flex align-items-center">
                 <i class="bi bi-envelope d-flex align-items-center"><a
                         href="mailto:contact@example.com">ziamulumamsssss@gmail.com</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                <i class="bi bi-github d-flex align-items-center ms-4">
+                    <span>
+                        <a href="https://github.com/Javastick" target="_blank">Javastick</a>
+                    </span>
+                </i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                <a href="https://www.instagram.com/ziamulumam" target="_blank" class="instagram"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ziamul-umam-898581243/" target="_blank" class="linkedin"><i
+                        class="bi bi-linkedin"></i></i></a>
             </div>
         </div>
     </section><!-- End Top Bar -->
@@ -56,46 +60,46 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
             <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+                {{-- <img src="storage/img/tcx.png" alt="" class="border rounded-circle"> --}}
                 <h1>TCX<span>.</span></h1>
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="{{route('complaints')}}">Pengaduan</a></li>
+                    <li><a href="{{ route('complaints') }}">Pengaduan</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i
-                                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
+                    <li>
+                        <a href="https://javastick.github.io/portoretro/" class="glightbox d-flex align-items-center">
+                            <span>Author</span>
+                        </a>
                     </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     @guest
-                        <a href="{{ route('login') }}" class="nav-link active">Login</a>
-                        <a href="{{ route('register') }}" class="nav-link active">Register</a>
+                        <li>
+                            <a href="{{ route('login') }}" class="nav-link">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}" class="nav-link">Daftar</a>
+                        </li>
                     @else
-                    <p>{{ $data['user']->getName() }}</p>
-                        <form action="{{ route('logout') }}" id="logout" method="POST">
-                            <a role="button" class="dropdown-item"
-                                onclick="document.getElementById('logout').submit();">Logout</a>
-                            @csrf
-                        </form>
+                        <li class="dropdown ms-5"><a href="#"><span
+                                    class="text-underline">{{ $data['user']->getName() }}</span> <i
+                                    class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="#">Profil</a>
+                                </li>
+                                <li>
+                                    <form action="{{ route('logout') }}" id="logout" method="POST">
+                                        <a role="button" class="dropdown-item"
+                                            onclick="document.getElementById('logout').submit();">Logout</a>
+                                        @csrf
+                                    </form>
+                                </li>
+                                <li><a href="#">Drop Down 3</a></li>
+                                <li><a href="#">Drop Down 4</a></li>
+                            </ul>
+                        </li>
                     @endguest
 
                 </ul>

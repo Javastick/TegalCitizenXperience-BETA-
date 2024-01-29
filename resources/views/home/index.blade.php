@@ -7,15 +7,16 @@
                 <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
                     <h2>Sugeng rawuh <span>Masyarakat Kota Tegal!</span></h2>
                     <p>Ayo berpartisipasi untuk kemajuan Kota Tegal dengan melaporkan kekurangan dari Kota Tercinta kita!
+                    <p>
+                        TegalCitizenXperience(TCX) adalah aplikasi untuk menampung segala pengaduan dari masyarakat kota tegal.
                     </p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="{{ route('complaint.make') }}" class="btn-get-started">Laporkan</a>
-                        <a href="{{ route('complaints') }}" class="glightbox d-flex align-items-center"><i
-                                class="bi bi-play-circle"></i><span>Lihat laporan terbaru</span></a>
+                        <a href="{{ route('complaint.make') }}" class="btn-get-started">Buat Pengaduan</a>
+                        <a href="{{ route('game') }}" class="btn-get-started ms-2">Main Game</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
-                    <img src="assets/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out"
+                    <img src="storage/img/news.png" class="img-fluid" alt="" data-aos="zoom-out"
                         data-aos-delay="100">
                 </div>
             </div>
@@ -69,7 +70,7 @@
                     <p class="text-center">Belum ada pengaduan</p>
                 </div>
             @else
-                <div class="row mt-3">
+                <div class="row ">
                     <h1 class="text-center">{{ $data['title'] }}</h1>
                     <div class="col-md-12">
                         <div id="content" class="content content-full-width">

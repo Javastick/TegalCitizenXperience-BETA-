@@ -60,7 +60,7 @@
         @guest
         @else
             @if ($data['user']->getRole() === 'agency')
-                <div class="timeline-comment-box m-2">
+                <div class="timeline-comment-box m-2" id="{{$data['complaint']->getId()}}">
                     <div class="user">
                         @if ($data['user']->getImage() !== null)
                             <img src="/storage/img/{{ $data['user']->getImage() }}">
